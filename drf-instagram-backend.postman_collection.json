@@ -1,0 +1,339 @@
+{
+	"info": {
+		"_postman_id": "d9708bcc-3af8-4041-87d1-f62a23cf68d7",
+		"name": "drf-instagram-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19992528"
+	},
+	"item": [
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"amarendra@example.com\",\r\n    \"password\": \"abc@1234\",\r\n    \"password_confirmation\": \"abc@1234\"\r\n\r\n    // \"email\": \"amar@example.com\",\r\n    // \"password\": \"abc@1234\",\r\n    // \"password_confirmation\": \"abc@1234\"\r\n\r\n    // \"email\": \"aman@example.com\",\r\n    // \"password\": \"abc@1234\",\r\n    // \"password_confirmation\": \"abc@1234\"\r\n\r\n    // \"email\": \"ankur@example.com\",\r\n    // \"password\": \"abc@1234\",\r\n    // \"password_confirmation\": \"abc@1234\"\r\n\r\n    // \"email\": \"ankit@example.com\",\r\n    // \"password\": \"abc@1234\",\r\n    // \"password_confirmation\": \"abc@1234\"\r\n\r\n    // \"email\": \"aniket@example.com\",\r\n    // \"password\": \"abc@1234\",\r\n    // \"password_confirmation\": \"abc@1234\"\r\n\r\n    // \"email\": \"aniket@example.com\",\r\n    // \"password\": \"abc@1234\",\r\n    // \"password_confirmation\": \"abc@1234\"\r\n\r\n    // \"email\": \"anikesh@example.com\",\r\n    // \"password\": \"abc@1234\",\r\n    // \"password_confirmation\": \"abc@1234\"\r\n\r\n    // \"email\": \"ankleshwar@example.com\",\r\n    // \"password\": \"abc@1234\",\r\n    // \"password_confirmation\": \"abc@1234\"\r\n\r\n    // \"email\": \"ankush@example.com\",\r\n    // \"password\": \"abc@1234\",\r\n    // \"password_confirmation\": \"abc@1234\"\r\n\r\n    \r\n    // \"email\": \"anupriya@example.com\",\r\n    // \"password\": \"abc@1234\",\r\n    // \"password_confirmation\": \"abc@1234\"\r\n\r\n    // \"email\": \"anushka@example.com\",\r\n    // \"password\": \"abc@1234\",\r\n    // \"password_confirmation\": \"abc@1234\"\r\n\r\n    // \"email\": \"unit@example.com\",\r\n    // \"password\": \"abc@1234\",\r\n    // \"password_confirmation\": \"abc@1234\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/user/signup/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Log In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"amarendra@example.com\",\r\n    \"password\": \"abc@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/user/login/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Access token From refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refresh\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcxNzYwNDE5MCwiaWF0IjoxNzE3NTE3NzkwLCJqdGkiOiI3MjdmNjBjZWM3M2Q0ODlmOThkYjhlODY3Y2Y5NGE2MSIsInVzZXJfaWQiOjF9.s57kYMHtEadYAVXFeZg4Te80prXkRZHWBcdYKKaH48Q\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/token/refresh/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Name",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Unit\",\r\n    \"last_name\": \"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/user/update_name/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"update_name",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search User",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/user/search/?page=1&search=unit",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "search",
+							"value": "unit"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Friend Request",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to_user\":2,\r\n    \"from_user\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/user/friend-request/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"friend-request",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept Friend Request",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/user/friend-request/accept/1/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"friend-request",
+						"accept",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reject Friend Request",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/user/friend-request/reject/2/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"friend-request",
+						"reject",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Friends",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/user/friends/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"friends",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Pending Requests",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/user/pending-requests/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"pending-requests",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
